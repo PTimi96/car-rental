@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <h1 class="mb-3 text-center">Create Car</h1>
+    <div class="col">
+      <div class="mb-3 ">
+        <label for="id">ID</label>
+        <input type="text" [(ngModel)]="carDetails.id" class="form-control" placeholder="ID">
+      </div>
+      <div class="mb-3 ">
+        <label for="img">Image link</label>
+        <input type="text" [(ngModel)]="carDetails.image" class="form-control" placeholder="Image link">
+      </div>
+      <div class="mb-3 ">
+        <label for="type">Type</label>
+        <input type="text" [(ngModel)]="carDetails.type" class="form-control" placeholder="Focus">
+      </div>
+      <div class="mb-3 ">
+        <label for="producer">Producer</label>
+        <input type="text" [(ngModel)]="carDetails.producer" class="form-control" placeholder="Ford">
+      </div>
+      <div class="mb-3 ">
+        <label for="price">Price</label>
+        <input type="text" [(ngModel)]="carDetails.price" class="form-control" placeholder="10000">
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-3 ">
+        <label for="description">Description</label>
+        <input type="text" [(ngModel)]="carDetails.description" class="form-control" placeholder="Some text">
+      </div>
+      <div class="mb-3 ">
+        <label for="seats">Seats</label>
+        <input type="text" [(ngModel)]="carDetails.seats" class="form-control" placeholder="5">
+      </div>
+      <div class="mb-3 ">
+        <label for="averageFuelUse">Average fuel use</label>
+        <input type="text" [(ngModel)]="carDetails.averageFuelUse" class="form-control" placeholder="9.5">
+      </div>
+      <div class="mb-3 ">
+        <label for="transmission">Transmission</label>
+        <input type="text" [(ngModel)]="carDetails.transmission" class="form-control" placeholder="Manual">
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success btn-block" (click)="addCar(carDetails)">Create Car</button>
+    </div>
+  </div>
+</div>

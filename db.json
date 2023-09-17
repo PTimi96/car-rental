@@ -1,0 +1,63 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "image": "https://www.fordszabo.hu/tportal_upload/carshop_images_szalon/956_0.jpg",
+      "type": "Ranger",
+      "producer": "Ford",
+      "price": 35000,
+      "description": "Ford's mid-size Ranger pickup truck has been totally redesigned for the 2024 model year, adopting bolder front-end styling inspired by the larger F-150. While Ford sells the Ranger with a turbodiesel V-6 in some overseas markets, the American version is powered by the same turbocharged 2.3-liter four-cylinder engine as the current truck, and it will be again for 2024. A more powerful twin-turbo gasoline-fired V-6 engine joins the lineup this year, and both engines can be had with rear- or four-wheel drive. We're most excited about the high-performance Ranger Raptor variant, but we review that model separately. Unlike last year's Ranger, which was offered in two distinct body styles, the new one is only available as a crew cab with four full-size doors. ",
+      "seats": 5,
+      "averageFuelUse": 9.5,
+      "transmission": "automatic"
+    },
+    {
+      "id": 2,
+      "image": "https://media-assets.mazda.eu/image/upload/q_auto,f_auto/c_fill,w_1200,h_900/mazdahu/globalassets/cars/2022-mazda-mx-5-st/211029_mx5_st_ipm5_lhd_1800_900_hero_large.jpg?rnd=492a4d",
+      "type": "MX5",
+      "producer": "Mazda",
+      "price": 62000,
+      "description": "Since its debut in 1989, the Mazda Miata has built a lasting reputation as one of the most popular and beloved sports cars in automotive history. The winning formula has remained the same across four generations and three decades—a combination of classic roadster design, with a lightweight, compact body, a front-engine, rear-wheel-drive layout, optional manual transmission, and a manually-operated soft top or retractable hardtop. It has also been an affordable source of pure and engaging driving experience for a wide range of automotive enthusiasts. This has earned the Miata a dedicated and passionate fan base, creating a strong community of owners and enthusiasts.",
+      "seats": 2,
+      "averageFuelUse": 8.5,
+      "transmission": "automatic"
+    },
+    {
+      "id": 3,
+      "image": "https://rentauto.hu/asset/termek/sx4-scross-rentauto-blue.jpg",
+      "type": "SX4",
+      "producer": "Suzuki",
+      "price": 28000,
+      "description": "Many of us get bigger as we get older, but not the Suzuki S-Cross small SUV. It's the same size as the original version of the car launched nearly a decade ago. And unlike many small SUVs, it's available with four-wheel drive to give you some extra traction to match the chunky looks. You don’t get any more ground clearance, though, so it's really only useful for slippery conditions and the least demanding of muddy farm tracks.",
+      "seats": "5",
+      "averageFuelUse": 6.5,
+      "transmission": "manual"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "carId": 1,
+      "fullName": "sdgfgf",
+      "email": "timi@timi.hu",
+      "adress": "sdfgh",
+      "city": "sadfgh",
+      "zip": "1234",
+      "phoneNumber": "01132456543",
+      "rentStartDate": "2023. 09. 21.",
+      "rentEndDate": "2023. 09. 28."
+    },
+    {
+      "id": 2,
+      "carId": 2,
+      "fullName": "timi pazmandi",
+      "email": "timi@timi.hu",
+      "adress": "timi utca",
+      "city": "timi city",
+      "zip": "1234",
+      "phoneNumber": "01234346543",
+      "rentStartDate": "2023. 09. 21.",
+      "rentEndDate": "2023. 09. 28."
+    }
+  ]
+}

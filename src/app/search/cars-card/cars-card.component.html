@@ -1,0 +1,32 @@
+<ng-container *ngFor="let car of cars">
+    <div class="container" *ngIf="cars.length !== 0">
+        <div class="images">
+            <img class="car-img" src="{{ car.image}}" />
+        </div>
+        <div class="product">
+            <p>{{ car.producer }}</p>
+            <h1>{{ car.type }}</h1>
+            <h2>{{ car.price }} HUF/day</h2>
+            <p class="desc">{{ car.description }}</p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div>
+                        <span class="material-icons">person</span>
+                        <p class="details">{{ car.seats }}<span>seats</span></p>
+                    </div>
+                    <div>
+                        <span class="material-icons">local_gas_station</span>
+                        <p class="details">{{ car.averageFuelUse }}<span>l</span></p>
+                    </div>
+                    <div>
+                        <img class="icon-img" src="../../../assets/manual-transmission.png">
+                        <p class="details">{{ car.transmission }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button class="add" (click)="bookTheCar(car)">Book the car</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,35 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <a [routerLink]="['/']">
+                    <img class="logo" src="../assets/car-rental-logo.jpg" alt="car-rental">
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <button type="button" class="btn btn-outline-dark" (click)="reDirectTo()">Manage booking</button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <router-outlet></router-outlet>
+</div>
+<footer>
+    <div class="credit-cards">
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_visa.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_master.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_paypal.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_unionpay.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_linepay.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_tw_711_pay.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_tw_fm_pay.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_taishin.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_amex.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_ecpay.png" />
+        <img class="credit-card" src="https://shoplineimg.com/assets/footer/card_jcb.png" />
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2023 Timi Pázmándi</p>
+    </div>
+</footer>

@@ -1,0 +1,29 @@
+.search {
+    background-image: url('../../assets/cars-img.jpg');
+    height: 550px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 2%;
+    padding-top: 8%;
+}
+
+button {
+    margin-left: 47%;
+}

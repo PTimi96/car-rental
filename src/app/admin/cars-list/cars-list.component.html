@@ -1,0 +1,84 @@
+<div class="container custom-container-2 mt-5">
+  <div>
+    <h1 class="mb-3 text-center">Rentals</h1>
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Adress</th>
+            <th scope="col">City</th>
+            <th scope="col">Zip</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Car ID</th>
+            <th scope="col">Rental start date</th>
+            <th scope="col">Rental end date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{ order.id }}</td>
+            <td>{{ order.fullName }}</td>
+            <td>{{ order.email }}</td>
+            <td>{{ order.adress }}</td>
+            <td>{{ order.city }}</td>
+            <td>{{ order.zip }}</td>
+            <td>{{ order.phoneNumber }}</td>
+            <td>{{ order.carId }}</td>
+            <td>{{ order.rentStartDate }}</td>
+            <td>{{ order.rentEndDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container custom-container-2 mt-5">
+  <div class="no-data text-center" *ngIf="cars.length == 0">
+    <p>There is no car added yet!</p>
+    <button class="btn btn-outline-primary" routerLink="cars-create">
+      Add Car
+    </button>
+  </div>
+  <div *ngIf="cars.length !== 0">
+    <h1 class="mb-3 text-center">Cars List</h1>
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Image</th>
+            <th scope="col">Type</th>
+            <th scope="col">Producer</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Seats</th>
+            <th scope="col">Average fuel use</th>
+            <th scope="col">Transmission</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{ car.id }}</td>
+            <td><img src="{{ car.image}}"></td>
+            <td>{{ car.type }}</td>
+            <td>{{ car.producer }}</td>
+            <td>{{ car.price }}</td>
+            <td>{{ car.description }}</td>
+            <td>{{ car.seats }}</td>
+            <td>{{ car.averageFuelUse }}</td>
+            <td>{{ car.transmission }}</td>
+            <td>
+              <span class="edit btn btn-sm btn-outline-primary me-2" routerLink="/cars-edit/{{ car.id }}">Edit</span>
+              <span class="delete edit btn btn-sm btn-outline-danger" (click)="deleteCar(car.id)">Delete</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<button class="btn btn-secondary" (click)="addCar()">Add car</button>

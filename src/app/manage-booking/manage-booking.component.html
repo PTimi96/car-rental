@@ -1,0 +1,123 @@
+<div class="container">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm)">
+    <div class="row">
+      <div class=".col-md-6 .offset-md-3">
+        <h3>Billing Address</h3>
+        <div>
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="fullname" [(ngModel)]="orderDetails.fullName" class="form-control"
+            placeholder="Example Name" formControlName="fname">
+          <div *ngIf="!fname.valid && (fname.dirty ||fname.touched)">
+            <div [hidden]="!fname.errors?.['required']">
+              <span class="text-danger">Please enter your full name!</span>
+            </div>
+            <div [hidden]="!fname.errors?.['pattern']">
+              <span class="text-danger">Please enter only alphabets!</span>
+            </div>
+            <div [hidden]="!fname.errors?.['minlength']">
+              <span class="text-danger">Please enter your full name!</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="email"> Email</label>
+          <input type="text" id="email" name="email" [(ngModel)]="orderDetails.email" class="form-control"
+            placeholder="example@example.com" formControlName="email">
+          <div *ngIf="!email.valid && (email.dirty ||email.touched)">
+            <div [hidden]="!email.errors?.['required']">
+              <span class="text-danger">Please enter your email!</span>
+            </div>
+            <div [hidden]="!email.errors?.['email']">
+              <span class="text-danger">Please enter a valid email!</span>
+            </div>
+          </div>
+        </div>
+        <div class=".col-md-6 .offset-md-3">
+          <div>
+            <label for="adr"> Address</label>
+            <input type="text" id="adr" name="address" [(ngModel)]="orderDetails.adress" class="form-control"
+              placeholder="Example str. 1." formControlName="adr">
+            <div *ngIf="!adr.valid && (adr.dirty ||adr.touched)">
+              <div [hidden]="!adr.errors?.['required']">
+                <span class="text-danger">Please enter your adress!</span>
+              </div>
+              <div [hidden]="!adr.errors?.['pattern']">
+                <span class="text-danger">Please enter the name of the street and the number of the
+                  house!</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" [(ngModel)]="orderDetails.city" class="form-control"
+              placeholder="Example city" formControlName="city">
+            <div *ngIf="!city.valid && (city.dirty ||city.touched)">
+              <div [hidden]="!city.errors?.['required']">
+                <span class="text-danger">Please enter your city name!</span>
+              </div>
+              <div [hidden]="!city.errors?.['pattern']">
+                <span class="text-danger">Please enter only alpabets!</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="zip">Zip</label>
+            <input type="text" onkeypress="return /[0-9]/i.test(event.key)" id="zip" name="zip" placeholder="1234"
+              [(ngModel)]="orderDetails.zip" formControlName="zip">
+            <div *ngIf="!zip.valid && (zip.dirty ||zip.touched)">
+              <div [hidden]="!zip.errors?.['required']">
+                <span class="text-danger">Please enter your Zip number!</span>
+              </div>
+              <div [hidden]="!zip.errors?.['minlength']">
+                <span class="text-danger">Please enter minimum 4 number!</span>
+              </div>
+              <div [hidden]="!zip.errors?.['maxlength']">
+                <span class="text-danger">Please enter maximum 4 number!</span>
+              </div>
+              <div [hidden]="!zip.errors?.['min']">
+                <span class="text-danger">Please enter a valid Zip number!</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="orderDetails.phoneNumber"
+              placeholder="06301234567" formControlName="phoneNumber" onkeypress="return /[0-9]/i.test(event.key)" >
+            <div *ngIf="!phoneNumber.valid && (phoneNumber.dirty ||phoneNumber.touched)">
+              <div [hidden]="!phoneNumber.errors?.['required']">
+                <span class="text-danger">Please enter your phone number!</span>
+              </div>
+              <div [hidden]="!phoneNumber.errors?.['minlength']">
+                <span class="text-danger">Please enter minimum 11 number!</span>
+              </div>
+              <div [hidden]="!phoneNumber.errors?.['maxlength']">
+                <span class="text-danger">Please enter maximum 11 number!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="col-12 " *ngFor="let item of items; let i = index ">
+    <div class="row">
+      <div class="col-6">
+        <img src="{{item.image}}">
+        <p class="producer">{{ item.producer }} </p>
+        <p>{{ item.type }}</p>
+      </div>
+      <div class="col-5 p-0">
+        <ul>
+          <li>{{ item.price }} HUF/day</li>
+          <li>{{ days }} day(s)</li>
+          <li>Total: {{ item.price * days}} Ft</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="btn-wrap">
+    <button type="submit" (click)="$Preview_onClick(checkoutForm)" (click)="addOrder(orderDetails)"
+      class="btn btn-success">Continue to checkout
+    </button>
+  </div>
+</div>
