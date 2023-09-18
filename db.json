@@ -35,29 +35,6 @@
     }
   ],
   "orders": [
-    {
-      "id": 1,
-      "carId": 1,
-      "fullName": "sdgfgf",
-      "email": "timi@timi.hu",
-      "adress": "sdfgh",
-      "city": "sadfgh",
-      "zip": "1234",
-      "phoneNumber": "01132456543",
-      "rentStartDate": "2023. 09. 21.",
-      "rentEndDate": "2023. 09. 28."
-    },
-    {
-      "id": 2,
-      "carId": 2,
-      "fullName": "timi pazmandi",
-      "email": "timi@timi.hu",
-      "adress": "timi utca",
-      "city": "timi city",
-      "zip": "1234",
-      "phoneNumber": "01234346543",
-      "rentStartDate": "2023. 09. 21.",
-      "rentEndDate": "2023. 09. 28."
-    }
+   
   ]
 }
